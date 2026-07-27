@@ -17,6 +17,9 @@
   .dropdown-menu a{display:block;padding:10px 14px;border-radius:6px;color:#3f4652;font-size:14.5px;font-weight:500}
   .dropdown-menu a:hover{background:#f5f4f0}
 </style>
+<style>
+  .cmp-row:hover{background:#f5f4f0}
+</style>
 </head>
 <body>
 
@@ -32,6 +35,7 @@
     <div class="dropdown" id="artifactsDropdown">
       <span onclick="document.getElementById('artifactsDropdown').classList.toggle('open')" style="display:flex;align-items:center;gap:6px;cursor:pointer;color:#3f4652">Artifacts <span style="font-size:11px">&#9660;</span></span>
       <div class="dropdown-menu">
+        <a href="artifact-1.html">Artifact 1</a>
         <a href="artifact-2.html">Artifact 2</a>
         <a href="artifact-3.html">Artifact 3</a>
       </div>
@@ -118,20 +122,22 @@
 
 <section style="max-width:1100px;margin:0 auto;padding:36px 56px">
   <h2 style="font-size:34px;font-weight:400;margin:0 0 30px">Choosing an Approach</h2>
+  <p style="font-size:14px;color:#7a828f;margin:0 0 20px;text-align:center">Click a question below to see which approach it points to.</p>
   <div style="display:flex;flex-direction:column;align-items:center">
-    <div style="background:#eceae4;border:2px solid #b3b0a8;border-radius:10px;padding:18px 30px;font-size:16px;font-weight:600;text-align:center">Is the data structured &amp; does it have clearly defined features?</div>
+    <div style="background:#eceae4;border:2px solid #b3b0a8;border-radius:10px;padding:18px 30px;font-size:16px;font-weight:600;text-align:center;color:#3f4652">Is the data structured &amp; does it have clearly defined features?</div>
     <div style="width:2px;height:26px;background:#b3b0a8"></div>
     <div style="display:flex;gap:60px">
       <div style="display:flex;flex-direction:column;align-items:center">
         <div style="font-size:13px;font-weight:700;color:#5a86c9;margin-bottom:8px">YES</div>
-        <div style="background:linear-gradient(135deg,#6a7fd6,#8a5fc9);color:white;border-radius:10px;padding:16px 26px;font-size:15px;font-weight:600">Machine Learning</div>
+        <div id="mlBox" onclick="selectPath('ml')" style="background:linear-gradient(135deg,#6a7fd6,#8a5fc9);color:white;border-radius:10px;padding:16px 26px;font-size:15px;font-weight:600;transition:transform 0.2s, box-shadow 0.2s;cursor:pointer">Machine Learning</div>
       </div>
       <div style="display:flex;flex-direction:column;align-items:center">
         <div style="font-size:13px;font-weight:700;color:#b56b3f;margin-bottom:8px">NO</div>
-        <div style="background:linear-gradient(135deg,#c9793f,#d69a4f);color:white;border-radius:10px;padding:16px 26px;font-size:15px;font-weight:600">Deep Learning</div>
+        <div id="dlBox" onclick="selectPath('dl')" style="background:linear-gradient(135deg,#c9793f,#d69a4f);color:white;border-radius:10px;padding:16px 26px;font-size:15px;font-weight:600;transition:transform 0.2s, box-shadow 0.2s;cursor:pointer">Deep Learning</div>
       </div>
     </div>
   </div>
+  <p style="font-size:13px;color:#7a828f;margin:16px 0 0;text-align:center">Click either box to highlight it.</p>
 </section>
 
 <section style="max-width:1100px;margin:0 auto;padding:36px 56px">
@@ -140,16 +146,16 @@
     <div style="display:grid;grid-template-columns:1.2fr 1fr 1fr;background:#282c34;color:white;font-size:14px;font-weight:600;padding:16px 24px">
       <span></span><span>Machine Learning</span><span>Deep Learning</span>
     </div>
-    <div style="display:grid;grid-template-columns:1.2fr 1fr 1fr;padding:16px 24px;font-size:14.5px;border-top:1px solid #ece9e2">
+    <div class="cmp-row" style="display:grid;grid-template-columns:1.2fr 1fr 1fr;padding:16px 24px;font-size:14.5px;border-top:1px solid #ece9e2;transition:background 0.15s">
       <span style="font-weight:600;color:#404955">Data Type</span><span style="color:#454e5c">Structured, tabular</span><span style="color:#454e5c">Unstructured (text, language)</span>
     </div>
-    <div style="display:grid;grid-template-columns:1.2fr 1fr 1fr;padding:16px 24px;font-size:14.5px;border-top:1px solid #ece9e2">
+    <div class="cmp-row" style="display:grid;grid-template-columns:1.2fr 1fr 1fr;padding:16px 24px;font-size:14.5px;border-top:1px solid #ece9e2;transition:background 0.15s">
       <span style="font-weight:600;color:#404955">Compute Cost</span><span style="color:#454e5c">Low</span><span style="color:#454e5c">High</span>
     </div>
-    <div style="display:grid;grid-template-columns:1.2fr 1fr 1fr;padding:16px 24px;font-size:14.5px;border-top:1px solid #ece9e2">
+    <div class="cmp-row" style="display:grid;grid-template-columns:1.2fr 1fr 1fr;padding:16px 24px;font-size:14.5px;border-top:1px solid #ece9e2;transition:background 0.15s">
       <span style="font-weight:600;color:#404955">Training Time</span><span style="color:#454e5c">Short</span><span style="color:#454e5c">Long</span>
     </div>
-    <div style="display:grid;grid-template-columns:1.2fr 1fr 1fr;padding:16px 24px;font-size:14.5px;border-top:1px solid #ece9e2">
+    <div class="cmp-row" style="display:grid;grid-template-columns:1.2fr 1fr 1fr;padding:16px 24px;font-size:14.5px;border-top:1px solid #ece9e2;transition:background 0.15s">
       <span style="font-weight:600;color:#404955">Best Suited For</span><span style="color:#454e5c">Churn prediction, tabular forecasting</span><span style="color:#454e5c">Natural language, context-heavy tasks</span>
     </div>
   </div>
@@ -178,6 +184,16 @@ document.addEventListener('click', function(e){
   var dd = document.getElementById('artifactsDropdown');
   if (!dd.contains(e.target)) dd.classList.remove('open');
 });
+function selectPath(which){
+  var ml = document.getElementById('mlBox'), dl = document.getElementById('dlBox');
+  if (which === 'ml'){
+    ml.style.transform = 'scale(1.08)'; ml.style.boxShadow = '0 10px 24px rgba(90,134,201,0.4)'; ml.style.opacity = '1';
+    dl.style.transform = 'scale(1)'; dl.style.boxShadow = 'none'; dl.style.opacity = '0.5';
+  } else {
+    dl.style.transform = 'scale(1.08)'; dl.style.boxShadow = '0 10px 24px rgba(201,121,63,0.4)'; dl.style.opacity = '1';
+    ml.style.transform = 'scale(1)'; ml.style.boxShadow = 'none'; ml.style.opacity = '0.5';
+  }
+}
 </script>
 </body>
 </html>

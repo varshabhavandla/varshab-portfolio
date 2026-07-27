@@ -45,6 +45,7 @@
     <div class="dropdown" id="artifactsDropdown">
       <span onclick="document.getElementById('artifactsDropdown').classList.toggle('open')" style="display:flex;align-items:center;gap:6px;cursor:pointer;color:#3f4652">Artifacts <span style="font-size:11px">&#9660;</span></span>
       <div class="dropdown-menu">
+        <a href="artifact-1.html">Artifact 1</a>
         <a href="artifact-2.html">Artifact 2</a>
         <a href="artifact-3.html">Artifact 3</a>
       </div>
@@ -142,22 +143,22 @@
   </div>
   <div style="background:white;border-radius:14px;padding:16px;box-shadow:0 8px 24px rgba(0,0,0,0.06);cursor:zoom-in" onclick="openLightbox()">
     <div class="evidence-shot active" id="shot0">
-      <img src="assets/evidence-1.png" alt="SchoolAI conversation on supervised learning" style="width:100%;border-radius:8px;display:block">
+      <img src="evidence-1.png" alt="SchoolAI conversation on supervised learning" style="width:100%;border-radius:8px;display:block">
       <p style="font-size:13.5px;color:#5a6270;margin:12px 4px 2px">Exploring how supervised learning models use loss functions and optimizers to reduce error.</p>
     </div>
     <div class="evidence-shot" id="shot1">
-      <img src="assets/evidence-2.png" alt="SchoolAI conversation on data and overfitting" style="width:100%;border-radius:8px;display:block">
+      <img src="evidence-2.png" alt="SchoolAI conversation on data and overfitting" style="width:100%;border-radius:8px;display:block">
       <p style="font-size:13.5px;color:#5a6270;margin:12px 4px 2px">Discussing the role of data quality and quantity, and the risk of overfitting.</p>
     </div>
     <div class="evidence-shot" id="shot2">
-      <img src="assets/evidence-3.png" alt="SchoolAI conversation on training steps" style="width:100%;border-radius:8px;display:block">
+      <img src="evidence-3.png" alt="SchoolAI conversation on training steps" style="width:100%;border-radius:8px;display:block">
       <p style="font-size:13.5px;color:#5a6270;margin:12px 4px 2px">Walking through the basic steps of training a machine learning model.</p>
     </div>
   </div>
 </section>
 
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-  <img id="lightboxImg" src="assets/evidence-1.png" alt="Enlarged evidence screenshot">
+  <img id="lightboxImg" src="evidence-1.png" alt="Enlarged evidence screenshot">
 </div>
 
 <script>
@@ -167,7 +168,7 @@ function togglePanel(i){
   document.querySelectorAll('.panel').forEach(function(el){ el.classList.remove('open'); });
   if (!wasOpen) p.classList.add('open');
 }
-var shotSrcs = ['assets/evidence-1.png','assets/evidence-2.png','assets/evidence-3.png'];
+var shotSrcs = ['evidence-1.png','evidence-2.png','evidence-3.png'];
 function selectShot(i){
   document.querySelectorAll('.evidence-shot').forEach(function(el,idx){ el.classList.toggle('active', idx===i); });
   document.querySelectorAll('.tab-btn').forEach(function(el,idx){ el.classList.toggle('active', idx===i); });

@@ -22,6 +22,13 @@
   .panel.open .panel-body{display:block}
   .panel.open .arrow{transform:rotate(90deg)}
   .arrow{font-size:20px;color:#5a86c9;transition:transform 0.2s;display:inline-block}
+  .lightbox{position:fixed;inset:0;background:rgba(20,20,25,0.85);display:none;align-items:center;justify-content:center;z-index:100;cursor:zoom-out}
+  .lightbox.open{display:flex}
+  .lightbox img{max-width:88vw;max-height:86vh;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+  .a1-tab-btn{padding:9px 18px;border-radius:20px;border:none;cursor:pointer;font-size:13px;font-weight:600;background:#eceae4;color:#454e5c}
+  .a1-tab-btn.active{background:#5a86c9;color:white}
+  .a1-shot{display:none}
+  .a1-shot.active{display:block}
 </style>
 </head>
 <body>
@@ -165,6 +172,39 @@
   </div>
 </section>
 
+<section style="max-width:1100px;margin:0 auto;padding:30px 56px 90px">
+  <h2 style="font-size:28px;font-weight:400;margin:0 0 6px">Evidence</h2>
+  <p style="font-size:13.5px;color:#6a707c;margin:0 0 18px">Selected screenshots from the process &mdash; click a tab to switch, or the image to view it enlarged.</p>
+  <div style="display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap">
+    <button class="a1-tab-btn active" onclick="selectA1Shot(0)">Roadmap Comparison</button>
+    <button class="a1-tab-btn" onclick="selectA1Shot(1)">GPT Configuration</button>
+    <button class="a1-tab-btn" onclick="selectA1Shot(2)">STORM Research</button>
+    <button class="a1-tab-btn" onclick="selectA1Shot(3)">Published Assistant</button>
+  </div>
+  <div style="background:white;border-radius:14px;padding:16px;box-shadow:0 8px 24px rgba(0,0,0,0.06);cursor:zoom-in" onclick="openA1Lightbox()">
+    <div class="a1-shot active" id="a1shot0">
+      <img src="a1-evidence-1.png" alt="ChatGPT Terraform learning roadmap response" style="width:100%;border-radius:8px;display:block">
+      <p style="font-size:13.5px;color:#6a707c;margin:12px 4px 2px">One of the three ChatGPT roadmap responses compared for structure and depth.</p>
+    </div>
+    <div class="a1-shot" id="a1shot1">
+      <img src="a1-evidence-2.png" alt="Terraform Azure DevOps custom GPT configuration" style="width:100%;border-radius:8px;display:block">
+      <p style="font-size:13.5px;color:#6a707c;margin:12px 4px 2px">Custom GPT configuration and a live response explaining Terraform state management.</p>
+    </div>
+    <div class="a1-shot" id="a1shot2">
+      <img src="a1-evidence-3.png" alt="STORM AI multi-perspective research" style="width:100%;border-radius:8px;display:block">
+      <p style="font-size:13.5px;color:#6a707c;margin:12px 4px 2px">STORM's multi-perspective research process, gathering information from different technical viewpoints.</p>
+    </div>
+    <div class="a1-shot" id="a1shot3">
+      <img src="a1-evidence-4.png" alt="Published Terraform Azure DevOps Assistant" style="width:100%;border-radius:8px;display:block">
+      <p style="font-size:13.5px;color:#6a707c;margin:12px 4px 2px">The published Terraform &amp; Azure DevOps Assistant with its conversation starters.</p>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="a1lightbox" onclick="closeA1Lightbox()">
+  <img id="a1lightboxImg" src="a1-evidence-1.png" alt="Enlarged evidence screenshot">
+</div>
+
 <script>
 function togglePanel(i){
   var p = document.getElementById('panel'+i);
@@ -176,6 +216,14 @@ document.addEventListener('click', function(e){
   var dd = document.getElementById('artifactsDropdown');
   if (!dd.contains(e.target)) dd.classList.remove('open');
 });
+var a1Srcs = ['a1-evidence-1.png','a1-evidence-2.png','a1-evidence-3.png','a1-evidence-4.png'];
+function selectA1Shot(i){
+  document.querySelectorAll('.a1-shot').forEach(function(el,idx){ el.classList.toggle('active', idx===i); });
+  document.querySelectorAll('.a1-tab-btn').forEach(function(el,idx){ el.classList.toggle('active', idx===i); });
+  document.getElementById('a1lightboxImg').src = a1Srcs[i];
+}
+function openA1Lightbox(){ document.getElementById('a1lightbox').classList.add('open'); }
+function closeA1Lightbox(){ document.getElementById('a1lightbox').classList.remove('open'); }
 </script>
 </body>
 </html>
