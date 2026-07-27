@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Artifact 1 — Terraform &amp; Azure DevOps Assistant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#fafaf7;color:#3f4652;font-family:'Poppins',system-ui,sans-serif}
+  a{color:#5a86c9;text-decoration:none}
+  a:hover{color:#4671b3}
+  .dropdown{position:relative}
+  .dropdown-menu{display:none;position:absolute;top:36px;right:0;background:white;border-radius:8px;box-shadow:0 12px 32px rgba(0,0,0,0.18);padding:8px;min-width:170px;z-index:20}
+  .dropdown.open .dropdown-menu{display:block}
+  .dropdown-menu a{display:block;padding:10px 14px;border-radius:6px;color:#3f4652;font-size:14.5px;font-weight:500}
+  .dropdown-menu a:hover{background:#f5f4f0}
+  .panel{background:white;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.05);overflow:hidden}
+  .panel-head{display:flex;align-items:center;gap:16px;padding:22px 28px;cursor:pointer}
+  .panel-body{padding:0 28px 28px;display:none}
+  .panel.open .panel-body{display:block}
+  .panel.open .arrow{transform:rotate(90deg)}
+  .arrow{font-size:20px;color:#5a86c9;transition:transform 0.2s;display:inline-block}
+</style>
+</head>
+<body>
+
+<nav style="display:flex;align-items:center;justify-content:space-between;padding:22px 56px;max-width:1280px;margin:0 auto">
+  <div style="display:flex;align-items:center;gap:14px">
+    <div style="width:38px;height:38px;border-radius:8px;background:#3f5a80;display:flex;align-items:center;justify-content:center;font-weight:700;color:white;font-size:15px">VB</div>
+    <span style="color:#2c333d;font-size:16px;font-weight:500">Cloud &amp; AI Engineer</span>
+  </div>
+  <div style="display:flex;gap:34px;align-items:center;font-size:15.5px">
+    <a href="index.html" style="color:#3f4652">Home</a>
+    <a href="index.html#about" style="color:#3f4652">About Me</a>
+    <a href="index.html#projects" style="color:#3f4652">Projects</a>
+    <div class="dropdown" id="artifactsDropdown">
+      <span onclick="document.getElementById('artifactsDropdown').classList.toggle('open')" style="display:flex;align-items:center;gap:6px;cursor:pointer;color:#3f4652">Artifacts <span style="font-size:11px">&#9660;</span></span>
+      <div class="dropdown-menu">
+        <a href="artifact-1.html">Artifact 1</a>
+        <a href="artifact-2.html">Artifact 2</a>
+        <a href="artifact-3.html">Artifact 3</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div style="background:#282c34;padding:70px 40px 58px;text-align:center">
+  <h1 style="font-size:38px;font-weight:300;color:white;margin:0 0 16px;max-width:900px;margin-left:auto;margin-right:auto">Exploring LLMs, Research Assistants, and Custom AI Assistants</h1>
+  <p style="font-size:18px;font-style:italic;font-weight:300;color:#c7cbd6;margin:0">Terraform &amp; Azure DevOps Assistant</p>
+</div>
+
+<section style="max-width:1100px;margin:0 auto;padding:60px 56px 10px">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
+    <div>
+      <div style="font-size:13px;font-weight:700;color:#5a86c9;letter-spacing:0.06em;margin-bottom:10px">WHAT IS IT?</div>
+      <p style="font-size:15.5px;line-height:1.75;color:#454e5c;margin:0">A multi-part applied AI lab comparing multiple ChatGPT learning roadmaps, customizing a domain-focused GPT, evaluating STORM as a research assistant, and designing and testing a Terraform &amp; Azure DevOps Assistant.</p>
+    </div>
+    <div>
+      <div style="font-size:13px;font-weight:700;color:#5a86c9;letter-spacing:0.06em;margin-bottom:10px">OBJECTIVE</div>
+      <p style="font-size:15.5px;line-height:1.75;color:#454e5c;margin:0">Build practical skill in evaluating generative AI outputs, refining prompts through iteration, using AI-assisted research, and designing a safe, specialized assistant for real-world cloud and DevOps users.</p>
+    </div>
+    <div>
+      <div style="font-size:13px;font-weight:700;color:#5a86c9;letter-spacing:0.06em;margin-bottom:10px">TOOLS</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <span style="font-size:12px;padding:6px 13px;border:1px solid #d8d5cd;border-radius:14px;color:#5a6270">ChatGPT</span>
+        <span style="font-size:12px;padding:6px 13px;border:1px solid #d8d5cd;border-radius:14px;color:#5a6270">Custom GPT Builder</span>
+        <span style="font-size:12px;padding:6px 13px;border:1px solid #d8d5cd;border-radius:14px;color:#5a6270">Terraform</span>
+        <span style="font-size:12px;padding:6px 13px;border:1px solid #d8d5cd;border-radius:14px;color:#5a6270">Azure DevOps</span>
+        <span style="font-size:12px;padding:6px 13px;border:1px solid #d8d5cd;border-radius:14px;color:#5a6270">STORM AI</span>
+        <span style="font-size:12px;padding:6px 13px;border:1px solid #d8d5cd;border-radius:14px;color:#5a6270">Design Thinking</span>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:13px;font-weight:700;color:#5a86c9;letter-spacing:0.06em;margin-bottom:10px">VALUE</div>
+      <p style="font-size:15.5px;line-height:1.75;color:#454e5c;margin:0">Shows how cloud and DevOps professionals can move beyond one-time AI answers toward repeatable, safe, domain-specific workflows &mdash; helping teams learn Terraform, troubleshoot Azure DevOps, and review infrastructure-as-code without exposing secrets or treating AI guidance as production authorization.</p>
+    </div>
+  </div>
+</section>
+
+<section style="max-width:1100px;margin:0 auto;padding:40px 56px 20px">
+  <h2 style="font-size:28px;font-weight:400;margin:0 0 20px">Process</h2>
+  <div style="display:flex;flex-direction:column;gap:14px">
+
+    <div class="panel open" id="panel0">
+      <div class="panel-head" onclick="togglePanel(0)">
+        <span style="font-size:13px;font-weight:700;color:#5a86c9;letter-spacing:0.08em">01</span>
+        <h3 style="font-size:22px;font-weight:500;margin:0;flex:1">Practice with LLM &mdash; Comparing Learning Roadmaps</h3>
+        <span class="arrow">&#8250;</span>
+      </div>
+      <div class="panel-body">
+        <p style="font-size:15.5px;line-height:1.75;color:#454e5c;margin:0 0 14px">Asked ChatGPT for a Terraform learning roadmap across three separate chat sessions, using the same prompt each time, to compare how the responses differed in structure and focus.</p>
+        <p style="font-size:15.5px;line-height:1.75;color:#454e5c;margin:0 0 14px">All three roadmaps progressed from fundamentals to production topics &mdash; state management, modules, testing, CI/CD, security, and governance &mdash; and all recommended hands-on projects. They differed in emphasis: one focused on operational readiness and troubleshooting habits, one read like a formal training curriculum with runbooks and failure scenarios, and one gave a simplified, well-structured path that was easiest to follow while still covering the advanced concepts.</p>
+        <p style="font-size:15.5px;line-height:1.75;color:#454e5c;margin:0">The third response worked best &mdash; clearest structure, good balance of theory and practice, least overwhelming. The exercise showed that identical prompts can still produce meaningfully different AI outputs depending on framing and emphasis.</p>
+      </div>
+    </div>
+
+    <div class="panel" id="panel1">
+      <div class="panel-head" onclick="togglePanel(1)">
+        <span style="font-size:13px;font-weight:700;color:#5a86c9;letter-spacing:0.08em">02</span>
+        <h3 style="font-size:22px;font-weight:500;margin:0;flex:1">Practice with Custom GPTs</h3>
+        <span class="arrow">&#8250;</span>
+      </div>
+      <div class="panel-body">
+        <p style="font-size:15.5px;line-height:1.75;color:#454e5c;margin:0 0 14px">Used the Terraform Expert GPT with the same original prompt, then iterated: asked it to build a customized Azure/Azure DevOps roadmap, factor in prior Azure experience, add specific project suggestions, explain its project-based reasoning, compress the plan into 6 weeks, and summarize the full conversation.</p>
+        <p style="font-size:15.5px;line-height:1.75;color:#454e5c;margin:0">Through those iterations, the GPT produced a realistic path covering hands-on projects, remote state management, modules, testing, security, Azure DevOps pipelines, drift detection, and recovery/governance &mdash; personalized to actual learning style and career goals, not a generic answer.</p>
+      </div>
+    </div>
+
+    <div class="panel" id="panel2">
+      <div class="panel-head" onclick="togglePanel(2)">
+        <span style="font-size:13px;font-weight:700;color:#5a86c9;letter-spacing:0.08em">03</span>
+        <h3 style="font-size:22px;font-weight:500;margin:0;flex:1">Practice with a Research Assistant (STORM AI)</h3>
+        <span class="arrow">&#8250;</span>
+      </div>
+      <div class="panel-body">
+        <p style="font-size:15.5px;line-height:1.75;color:#454e5c;margin:0 0 14px">Researched "Terraform for Azure Infrastructure Automation" in STORM AI, chosen because prior Azure experience made it possible to judge the accuracy of the output. STORM broke the topic into research questions and approached it from three perspectives &mdash; a Cloud Infrastructure Engineer, a Basic Fact Writer, and a Security Engineer &mdash; before producing a structured, referenced article covering concepts, architecture, deployment patterns, best practices, tooling, and limitations.</p>
+        <p style="font-size:15.5px;line-height:1.75;color:#454e5c;margin:0">STORM's value is in the visible research process, not just the final article: multi-perspective brainstorming produced a more well-rounded, technically grounded result than a single-shot AI answer &mdash; at the cost of taking noticeably longer to generate. <a href="https://storm.genie.stanford.edu/article/terraform-for-azure-infrastructure-automation-1617935" target="_blank">View the generated article &rarr;</a></p>
+      </div>
+    </div>
+
+    <div class="panel" id="panel3">
+      <div class="panel-head" onclick="togglePanel(3)">
+        <span style="font-size:13px;font-weight:700;color:#5a86c9;letter-spacing:0.08em">04</span>
+        <h3 style="font-size:22px;font-weight:500;margin:0;flex:1">Building the Assistant &mdash; Design Thinking</h3>
+        <span class="arrow">&#8250;</span>
+      </div>
+      <div class="panel-body">
+        <p style="font-size:15.5px;line-height:1.75;color:#454e5c;margin:0 0 20px">Built as a ChatGPT Custom GPT, chosen for fast configuration of instructions, conversation starters, web search, and code analysis without added programming.</p>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div><strong style="color:#2c333d">Empathize:</strong> <span style="color:#454e5c">Cloud Engineers, DevOps Engineers, Azure Administrators, and Terraform learners who struggle with syntax, state management, Azure authentication, and pipeline troubleshooting.</span></div>
+          <div><strong style="color:#2c333d">Define:</strong> <span style="color:#454e5c">Azure/DevOps professionals need guidance, explanations, and troubleshooting support to adopt Terraform confidently.</span></div>
+          <div><strong style="color:#2c333d">Ideate:</strong> <span style="color:#454e5c">Considered a Terraform Learning Assistant, an Azure Architecture Assistant, and an Azure DevOps Assistant &mdash; chose the combined Terraform &amp; Azure DevOps Assistant to cover learning, implementation, troubleshooting, and best practices in one tool.</span></div>
+          <div><strong style="color:#2c333d">Prototype:</strong> <span style="color:#454e5c">Built the Custom GPT with instructions, conversation starters, web search, and code analysis enabled.</span></div>
+          <div><strong style="color:#2c333d">Test:</strong> <span style="color:#454e5c">Ran real-world scenarios to evaluate explanations, code generation, troubleshooting, and safety behavior.</span></div>
+        </div>
+        <p style="font-size:15.5px;line-height:1.75;color:#454e5c;margin:20px 0 0">Key design decisions: the assistant should never request passwords, secrets, tokens, or private keys, and should never approve production deployments or claim to have made changes itself. It engages step by step &mdash; understand the goal, gather information, analyze the issue, recommend a safe next step, and summarize.</p>
+      </div>
+    </div>
+
+    <div class="panel" id="panel4">
+      <div class="panel-head" onclick="togglePanel(4)">
+        <span style="font-size:13px;font-weight:700;color:#5a86c9;letter-spacing:0.08em">05</span>
+        <h3 style="font-size:22px;font-weight:500;margin:0;flex:1">Testing Results</h3>
+        <span class="arrow">&#8250;</span>
+      </div>
+      <div class="panel-body">
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="background:#fafaf7;border-radius:8px;padding:14px 18px;font-size:14.5px;color:#454e5c">Explaining Terraform remote state management &mdash; clear, beginner-appropriate explanations.</div>
+          <div style="background:#fafaf7;border-radius:8px;padding:14px 18px;font-size:14.5px;color:#454e5c">Creating a reusable Terraform module for Azure Storage Accounts &mdash; produced a correct module structure with explanation.</div>
+          <div style="background:#fafaf7;border-radius:8px;padding:14px 18px;font-size:14.5px;color:#454e5c">Troubleshooting Azure DevOps authentication issues &mdash; identified likely causes and gave step-by-step guidance.</div>
+          <div style="background:#eaf1fb;border-left:3px solid #5a86c9;border-radius:8px;padding:14px 18px;font-size:14.5px;color:#404955">Requesting Terraform state file deletion &mdash; the assistant did not comply immediately; it explained the risks and suggested safer alternatives instead.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section style="max-width:1100px;margin:0 auto;padding:30px 56px 90px">
+  <div style="display:flex;gap:14px;flex-wrap:wrap">
+    <a href="https://chatgpt.com/g/g-6a541191cc60819190cfda28f1c60cad-terraform-azure-devops-assistant" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 22px;background:#5a86c9;color:white;font-weight:600;font-size:14px;border-radius:6px">Explore the Assistant &rarr;</a>
+    <a href="https://drive.google.com/open?id=1vTYCZcpTk2sHI8-3JpUuUK01eovUFfD5yE-yXHFphHU" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border:1px solid #c7cbd6;color:#2c333d;font-weight:600;font-size:14px;border-radius:6px">View Assignment 1.4</a>
+  </div>
+</section>
+
+<script>
+function togglePanel(i){
+  var p = document.getElementById('panel'+i);
+  var wasOpen = p.classList.contains('open');
+  document.querySelectorAll('.panel').forEach(function(el){ el.classList.remove('open'); });
+  if (!wasOpen) p.classList.add('open');
+}
+document.addEventListener('click', function(e){
+  var dd = document.getElementById('artifactsDropdown');
+  if (!dd.contains(e.target)) dd.classList.remove('open');
+});
+</script>
+</body>
+</html>
