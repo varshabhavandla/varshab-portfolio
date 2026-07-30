@@ -19,6 +19,13 @@
 </style>
 <style>
   .cmp-row:hover{background:#f5f4f0}
+  .a2-workflow-grid{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+  .a2-rw-grid{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .a2-yn-row{gap:60px}
+  @media (max-width:700px){
+    body :is(nav,section){padding-left:20px !important;padding-right:20px !important}
+    .a2-yn-row{gap:24px !important;flex-wrap:wrap !important;justify-content:center !important}
+  }
 </style>
 </head>
 <body>
@@ -28,7 +35,7 @@
     <div style="width:38px;height:38px;border-radius:8px;background:#3f5a80;display:flex;align-items:center;justify-content:center;font-weight:700;color:white;font-size:15px">VB</div>
     <span style="color:#2c333d;font-size:16px;font-weight:500">Cloud &amp; AI Engineer</span>
   </div>
-  <div style="display:flex;gap:34px;align-items:center;font-size:15.5px">
+  <div style="display:flex;gap:34px;align-items:center;font-size:15.5px;flex-wrap:wrap">
     <a href="index.html" style="color:#3f4652">Home</a>
     <a href="index.html#about" style="color:#3f4652">About Me</a>
     <a href="index.html#projects" style="color:#3f4652">Projects</a>
@@ -38,6 +45,7 @@
         <a href="artifact-1.html">Artifact 1</a>
         <a href="artifact-2.html">Artifact 2</a>
         <a href="artifact-3.html">Artifact 3</a>
+        <a href="artifact-4.html">Artifact 4</a>
       </div>
     </div>
   </div>
@@ -71,7 +79,7 @@
 <section style="max-width:1100px;margin:0 auto;padding:36px 56px">
   <h2 style="font-size:34px;font-weight:400;margin:0 0 30px">Process and Methodology</h2>
   <div style="text-align:center;font-size:20px;font-weight:600;color:#5a86c9;margin-bottom:26px">Research &amp; Analysis Workflow</div>
-  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:18px 12px;max-width:760px;margin:0 auto">
+  <div class="a2-workflow-grid" style="display:grid;gap:18px 12px;max-width:760px;margin:0 auto">
     <div style="background:linear-gradient(135deg,#6a7fd6,#8a5fc9);border-radius:12px;padding:26px 20px;text-align:center;color:white;font-size:17px;font-weight:600">1. Identify ML Example</div>
     <div style="background:linear-gradient(135deg,#6a7fd6,#8a5fc9);border-radius:12px;padding:26px 20px;text-align:center;color:white;font-size:17px;font-weight:600">2. Analyze Data Fit</div>
     <div style="background:linear-gradient(135deg,#6a7fd6,#8a5fc9);border-radius:12px;padding:26px 20px;text-align:center;color:white;font-size:17px;font-weight:600">3. Identify DL Example</div>
@@ -84,7 +92,7 @@
 
 <section style="max-width:1100px;margin:0 auto;padding:50px 56px 20px">
   <h2 style="font-size:34px;font-weight:400;margin:0 0 30px">Real World Applications Analyzed</h2>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+  <div class="a2-rw-grid" style="display:grid;gap:28px">
     <div style="background:white;border-radius:14px;padding:34px;box-shadow:0 8px 24px rgba(0,0,0,0.06)">
       <h3 style="font-size:22px;font-weight:600;margin:0 0 14px;color:#3f6bb5">Machine Learning: Customer Churn Prediction</h3>
       <p style="font-size:14.5px;margin:0 0 4px;color:#454e5c"><strong>Industry:</strong> Telecommunications</p>
@@ -126,7 +134,7 @@
   <div style="display:flex;flex-direction:column;align-items:center">
     <div style="background:#eceae4;border:2px solid #b3b0a8;border-radius:10px;padding:18px 30px;font-size:16px;font-weight:600;text-align:center;color:#3f4652">Is the data structured &amp; does it have clearly defined features?</div>
     <div style="width:2px;height:26px;background:#b3b0a8"></div>
-    <div style="display:flex;gap:60px">
+    <div class="a2-yn-row" style="display:flex">
       <div style="display:flex;flex-direction:column;align-items:center">
         <div style="font-size:13px;font-weight:700;color:#5a86c9;margin-bottom:8px">YES</div>
         <div id="mlBox" onclick="selectPath('ml')" style="background:linear-gradient(135deg,#6a7fd6,#8a5fc9);color:white;border-radius:10px;padding:16px 26px;font-size:15px;font-weight:600;transition:transform 0.2s, box-shadow 0.2s;cursor:pointer">Machine Learning</div>
@@ -142,7 +150,8 @@
 
 <section style="max-width:1100px;margin:0 auto;padding:36px 56px">
   <h2 style="font-size:34px;font-weight:400;margin:0 0 26px">At a Glance</h2>
-  <div style="background:white;border-radius:14px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,0.06)">
+  <div style="overflow-x:auto">
+  <div style="background:white;border-radius:14px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,0.06);min-width:560px">
     <div style="display:grid;grid-template-columns:1.2fr 1fr 1fr;background:#282c34;color:white;font-size:14px;font-weight:600;padding:16px 24px">
       <span></span><span>Machine Learning</span><span>Deep Learning</span>
     </div>
@@ -158,6 +167,7 @@
     <div class="cmp-row" style="display:grid;grid-template-columns:1.2fr 1fr 1fr;padding:16px 24px;font-size:14.5px;border-top:1px solid #ece9e2;transition:background 0.15s">
       <span style="font-weight:600;color:#404955">Best Suited For</span><span style="color:#454e5c">Churn prediction, tabular forecasting</span><span style="color:#454e5c">Natural language, context-heavy tasks</span>
     </div>
+  </div>
   </div>
 </section>
 

@@ -29,6 +29,10 @@
   .a1-tab-btn.active{background:#5a86c9;color:white}
   .a1-shot{display:none}
   .a1-shot.active{display:block}
+  .a1-info-grid{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  @media (max-width:700px){
+    body :is(nav,section){padding-left:20px !important;padding-right:20px !important}
+  }
 </style>
 </head>
 <body>
@@ -38,7 +42,7 @@
     <div style="width:38px;height:38px;border-radius:8px;background:#3f5a80;display:flex;align-items:center;justify-content:center;font-weight:700;color:white;font-size:15px">VB</div>
     <span style="color:#2c333d;font-size:16px;font-weight:500">Cloud &amp; AI Engineer</span>
   </div>
-  <div style="display:flex;gap:34px;align-items:center;font-size:15.5px">
+  <div style="display:flex;gap:34px;align-items:center;font-size:15.5px;flex-wrap:wrap">
     <a href="index.html" style="color:#3f4652">Home</a>
     <a href="index.html#about" style="color:#3f4652">About Me</a>
     <a href="index.html#projects" style="color:#3f4652">Projects</a>
@@ -48,6 +52,7 @@
         <a href="artifact-1.html">Artifact 1</a>
         <a href="artifact-2.html">Artifact 2</a>
         <a href="artifact-3.html">Artifact 3</a>
+        <a href="artifact-4.html">Artifact 4</a>
       </div>
     </div>
   </div>
@@ -59,7 +64,7 @@
 </div>
 
 <section style="max-width:1100px;margin:0 auto;padding:60px 56px 10px">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
+  <div class="a1-info-grid" style="display:grid;gap:32px">
     <div>
       <div style="font-size:13px;font-weight:700;color:#5a86c9;letter-spacing:0.06em;margin-bottom:10px">WHAT IS IT?</div>
       <p style="font-size:15.5px;line-height:1.75;color:#454e5c;margin:0">A multi-part applied AI lab comparing multiple ChatGPT learning roadmaps, customizing a domain-focused GPT, evaluating STORM as a research assistant, and designing and testing a Terraform &amp; Azure DevOps Assistant.</p>
