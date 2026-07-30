@@ -26,12 +26,17 @@
 </style>
 <style>
   .cmp-row:hover{background:#f5f4f0}
-  .a2-workflow-grid{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+  .a2-workflow-grid{grid-template-columns:repeat(2,1fr)}
   .a2-rw-grid{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
   .a2-yn-row{gap:60px}
+  h2{position:relative;padding-bottom:14px}
+  h2::after{content:'';position:absolute;left:0;bottom:0;width:48px;height:3px;background:#5a86c9;border-radius:2px}
+  .a2-rw-card{transition:transform 0.2s, box-shadow 0.2s}
+  .a2-rw-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,0.1)}
   @media (max-width:700px){
     body :is(nav,section){padding-left:20px !important;padding-right:20px !important}
     .a2-yn-row{gap:24px !important;flex-wrap:wrap !important;justify-content:center !important}
+    .a2-workflow-grid{grid-template-columns:1fr !important}
   }
 </style>
 </head>
@@ -69,7 +74,7 @@
   <p style="font-size:17px;line-height:1.8;color:#454e5c;margin:0">This artifact examines two fundamental AI paradigms through practical case studies: Customer Churn Prediction (Machine Learning) and Natural Language Processing (Deep Learning), comparing how well each is suited to its real-world application.</p>
 </section>
 
-<section style="max-width:1100px;margin:0 auto;padding:36px 56px">
+<section style="max-width:1100px;margin:0 auto;padding:40px 56px 20px">
   <h2 style="font-size:34px;font-weight:400;margin:0 0 16px">Primary Goal</h2>
   <p style="font-size:17px;line-height:1.8;color:#454e5c;margin:0 0 28px">To develop a clear understanding of the fundamental differences between machine learning and deep learning by analyzing their respective strengths, limitations, and optimal use cases.</p>
   <div style="background:#eaf1fb;border-left:4px solid #5a86c9;border-radius:8px;padding:28px 32px">
@@ -83,7 +88,7 @@
   </div>
 </section>
 
-<section style="max-width:1100px;margin:0 auto;padding:36px 56px">
+<section style="max-width:1100px;margin:0 auto;padding:40px 56px 20px">
   <h2 style="font-size:34px;font-weight:400;margin:0 0 30px">Process and Methodology</h2>
   <div style="text-align:center;font-size:20px;font-weight:600;color:#5a86c9;margin-bottom:26px">Research &amp; Analysis Workflow</div>
   <div class="a2-workflow-grid" style="display:grid;gap:18px 12px;max-width:760px;margin:0 auto">
@@ -97,10 +102,10 @@
   </div>
 </section>
 
-<section style="max-width:1100px;margin:0 auto;padding:50px 56px 20px">
+<section style="max-width:1100px;margin:0 auto;padding:40px 56px 20px">
   <h2 style="font-size:34px;font-weight:400;margin:0 0 30px">Real World Applications Analyzed</h2>
   <div class="a2-rw-grid" style="display:grid;gap:28px">
-    <div style="background:white;border-radius:14px;padding:34px;box-shadow:0 8px 24px rgba(0,0,0,0.06)">
+    <div class="a2-rw-card" style="background:white;border-radius:14px;padding:34px;box-shadow:0 8px 24px rgba(0,0,0,0.06)">
       <h3 style="font-size:22px;font-weight:600;margin:0 0 14px;color:#3f6bb5">Machine Learning: Customer Churn Prediction</h3>
       <p style="font-size:14.5px;margin:0 0 4px;color:#454e5c"><strong>Industry:</strong> Telecommunications</p>
       <p style="font-size:14.5px;margin:0 0 18px;color:#454e5c"><strong>Data Type:</strong> Structured, tabular</p>
@@ -116,7 +121,7 @@
         <p style="font-size:14.5px;line-height:1.65;color:#404955;margin:0"><strong>Why ML works:</strong> the data is already tabular with clear relationships, so accurate predictions don't require large datasets or costly compute. Deep learning here would add high computational cost and long training time for minimal accuracy benefit.</p>
       </div>
     </div>
-    <div style="background:white;border-radius:14px;padding:34px;box-shadow:0 8px 24px rgba(0,0,0,0.06)">
+    <div class="a2-rw-card" style="background:white;border-radius:14px;padding:34px;box-shadow:0 8px 24px rgba(0,0,0,0.06)">
       <h3 style="font-size:22px;font-weight:600;margin:0 0 14px;color:#b56b3f">Deep Learning: Natural Language Processing</h3>
       <p style="font-size:14.5px;margin:0 0 4px;color:#454e5c"><strong>Example:</strong> ChatGPT</p>
       <p style="font-size:14.5px;margin:0 0 18px;color:#454e5c"><strong>Data Type:</strong> Unstructured, natural language</p>
@@ -135,7 +140,7 @@
   </div>
 </section>
 
-<section style="max-width:1100px;margin:0 auto;padding:36px 56px">
+<section style="max-width:1100px;margin:0 auto;padding:40px 56px 20px">
   <h2 style="font-size:34px;font-weight:400;margin:0 0 30px">Choosing an Approach</h2>
   <p style="font-size:14px;color:#7a828f;margin:0 0 20px;text-align:center">Click a question below to see which approach it points to.</p>
   <div style="display:flex;flex-direction:column;align-items:center">
@@ -155,7 +160,7 @@
   <p style="font-size:13px;color:#7a828f;margin:16px 0 0;text-align:center">Click either box to highlight it.</p>
 </section>
 
-<section style="max-width:1100px;margin:0 auto;padding:36px 56px">
+<section style="max-width:1100px;margin:0 auto;padding:40px 56px 20px">
   <h2 style="font-size:34px;font-weight:400;margin:0 0 26px">At a Glance</h2>
   <div style="overflow-x:auto">
   <div style="background:white;border-radius:14px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,0.06);min-width:560px">
@@ -182,7 +187,7 @@
   <p style="font-size:24px;font-weight:300;font-style:italic;line-height:1.6;text-align:center;color:#2c333d;margin:0">&ldquo;The right choice depends on the nature of the data, the complexity of the problem, and the resources available to build the model.&rdquo;</p>
 </section>
 
-<section style="max-width:1100px;margin:0 auto;padding:20px 56px 30px">
+<section style="max-width:1100px;margin:0 auto;padding:30px 56px 20px">
   <h2 style="font-size:34px;font-weight:400;margin:0 0 16px">Conclusion</h2>
   <p style="font-size:17px;line-height:1.8;color:#454e5c;margin:0">Machine learning and deep learning are both significant components of AI, but they are more effectively applied to different types of problems. Steer clear of machine learning for data that is not easily structured and lacks explicitly defined features &mdash; those cases are hard to model successfully. Natural language processing, by contrast, demands deep learning due to the intricate nature of comprehending human language, which is beyond the capabilities of traditional machine learning models. The right choice depends on the nature of the data, the complexity of the problem, and the resources available to build the model.</p>
 </section>
