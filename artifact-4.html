@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Artifact 4 — Navigating Human Bias in AI Leadership</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#faf8f5;color:#3d3833;font-family:'Poppins',system-ui,sans-serif}
+  a{color:#b5652f;text-decoration:none}
+  a:hover{color:#8f4f24}
+  .dropdown{position:relative}
+  .dropdown-menu{display:none;position:absolute;top:36px;right:0;background:white;border-radius:8px;box-shadow:0 12px 32px rgba(0,0,0,0.18);padding:8px;min-width:170px;z-index:20}
+  .dropdown.open .dropdown-menu{display:block}
+  .dropdown-menu a{display:block;padding:10px 14px;border-radius:6px;color:#3d3833;font-size:14.5px;font-weight:500}
+  .dropdown-menu a:hover{background:#f5f1ea}
+  .strat-card{transition:transform 0.2s, box-shadow 0.2s;cursor:default;position:relative;overflow:hidden}
+  .strat-card:hover{transform:translateY(-6px);box-shadow:0 16px 32px rgba(0,0,0,0.12)}
+  .strat-num{position:absolute;top:-14px;right:10px;font-size:70px;font-weight:700;color:#f2ece2;line-height:1;z-index:0}
+  .strat-card > *{position:relative;z-index:1}
+  .stage-node{cursor:pointer;transition:transform 0.2s}
+  .stage-node:hover{transform:translateY(-3px)}
+  .stage-circle{width:56px;height:56px;border-radius:50%;background:#eee6d8;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;color:#b5652f;margin:0 auto 10px;transition:background 0.2s,color 0.2s,transform 0.2s}
+  .stage-node.active .stage-circle{background:#b5652f;color:white;transform:scale(1.12)}
+  .stage-label{font-size:13px;font-weight:600;text-align:center;color:#6b6259}
+  .stage-node.active .stage-label{color:#2c2822}
+  .stage-detail{display:none}
+  .stage-detail.active{display:block;animation:fadeIn 0.35s ease}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+  .quote-mark{font-size:70px;color:#eadfc9;font-weight:700;line-height:0.5;display:block;margin-bottom:10px}
+  .counter-num{font-size:34px;font-weight:700;color:#b5652f}
+  .connector{flex:1;height:2px;background:#e4dccb;margin-top:28px}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease, transform 0.6s ease}
+  .reveal.visible{opacity:1;transform:translateY(0)}
+  .progress-bar{position:fixed;top:0;left:0;height:3px;background:#b5652f;z-index:50;width:0%;transition:width 0.1s linear}
+  h2{position:relative;padding-bottom:14px}
+  h2::after{content:'';position:absolute;left:0;bottom:0;width:48px;height:3px;background:#b5652f;border-radius:2px}
+  .stat-item{transition:transform 0.2s}
+  .stat-item:hover{transform:translateY(-4px)}
+</style>
+</head>
+<body>
+<div class="progress-bar" id="progressBar"></div>
+
+<nav style="display:flex;align-items:center;justify-content:space-between;padding:22px 56px;max-width:1280px;margin:0 auto">
+  <div style="display:flex;align-items:center;gap:14px">
+    <div style="width:38px;height:38px;border-radius:8px;background:#3f5a80;display:flex;align-items:center;justify-content:center;font-weight:700;color:white;font-size:15px">VB</div>
+    <span style="color:#2c2822;font-size:16px;font-weight:500">Cloud &amp; AI Engineer</span>
+  </div>
+  <div style="display:flex;gap:34px;align-items:center;font-size:15.5px">
+    <a href="index.html" style="color:#3d3833">Home</a>
+    <a href="index.html#about" style="color:#3d3833">About Me</a>
+    <a href="index.html#projects" style="color:#3d3833">Projects</a>
+    <div class="dropdown" id="artifactsDropdown">
+      <span onclick="document.getElementById('artifactsDropdown').classList.toggle('open')" style="display:flex;align-items:center;gap:6px;cursor:pointer;color:#3d3833">Artifacts <span style="font-size:11px">&#9660;</span></span>
+      <div class="dropdown-menu">
+        <a href="artifact-1.html">Artifact 1</a>
+        <a href="artifact-2.html">Artifact 2</a>
+        <a href="artifact-3.html">Artifact 3</a>
+        <a href="artifact-4.html">Artifact 4</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div style="background:#2c2822;padding:70px 40px 58px;text-align:center">
+  <h1 style="font-size:40px;font-weight:300;color:white;margin:0 0 16px;max-width:900px;margin-left:auto;margin-right:auto">Navigating Human Bias in AI Leadership</h1>
+  <p style="font-size:18px;font-style:italic;font-weight:300;color:#d9cfc0;margin:0">Fairness, transparency, and ethical decision-making in cloud &amp; AI platforms</p>
+</div>
+
+<section style="max-width:1100px;margin:-34px auto 0;padding:0 56px">
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;background:white;border-radius:14px;padding:30px 10px;box-shadow:0 12px 32px rgba(0,0,0,0.08)">
+    <div class="stat-item" style="text-align:center"><div class="counter-num">4</div><div style="font-size:12.5px;color:#6b6259">AI lifecycle stages examined</div></div>
+    <div class="stat-item" style="text-align:center"><div class="counter-num">5</div><div style="font-size:12.5px;color:#6b6259">Leadership strategies</div></div>
+    <div class="stat-item" style="text-align:center"><div class="counter-num">1</div><div style="font-size:12.5px;color:#6b6259">Guiding value statement</div></div>
+    <div class="stat-item" style="text-align:center"><div class="counter-num">100%</div><div style="font-size:12.5px;color:#6b6259">Focus on trustworthy AI</div></div>
+  </div>
+</section>
+
+<section class="reveal" style="max-width:1100px;margin:0 auto;padding:60px 56px 10px">
+  <h2 style="font-size:28px;font-weight:400;margin:0 0 16px">Objective</h2>
+  <p style="font-size:16.5px;line-height:1.8;color:#4f473f;margin:0;max-width:800px">This artifact demonstrates understanding of how human bias can influence AI systems throughout data collection, model development, deployment, and evaluation &mdash; and how leaders can reduce those risks through thoughtful processes and cross-functional collaboration.</p>
+</section>
+
+<section class="reveal" style="max-width:1100px;margin:0 auto;padding:36px 56px">
+  <h2 style="font-size:28px;font-weight:400;margin:0 0 16px">Personal Value Statement</h2>
+  <div style="background:#2c2822;border-radius:10px;padding:30px 34px">
+    <p style="font-size:16px;line-height:1.8;color:#eee8de;margin:0">As a Cloud Platform Engineer working with AI and cloud technologies, technology should be designed and deployed in a way that is fair, transparent, and beneficial to everyone. AI systems are only as reliable as the data, processes, and people behind them. Because human bias can unintentionally influence data collection, model development, and decision-making, leaders have a responsibility to recognize these risks and build processes that promote fairness, accountability, and continuous improvement &mdash; combining technical excellence with ethical decision-making to create AI-enabled platforms that people can trust.</p>
+  </div>
+</section>
+
+<section class="reveal" style="max-width:1100px;margin:0 auto;padding:36px 56px">
+  <h2 style="font-size:28px;font-weight:400;margin:0 0 8px">Where Bias Enters the AI Lifecycle</h2>
+  <p style="font-size:14.5px;color:#8a8074;margin:0 0 28px">Click a stage to see how bias can emerge and what leaders should watch for.</p>
+  <div style="display:flex;align-items:flex-start;margin-bottom:26px">
+    <div class="stage-node active" id="node0" onclick="selectStage(0)" style="flex:1">
+      <div class="stage-circle">01</div>
+      <div class="stage-label">Data Collection</div>
+    </div>
+    <div class="connector"></div>
+    <div class="stage-node" id="node1" onclick="selectStage(1)" style="flex:1">
+      <div class="stage-circle">02</div>
+      <div class="stage-label">Model Development</div>
+    </div>
+    <div class="connector"></div>
+    <div class="stage-node" id="node2" onclick="selectStage(2)" style="flex:1">
+      <div class="stage-circle">03</div>
+      <div class="stage-label">Deployment</div>
+    </div>
+    <div class="connector"></div>
+    <div class="stage-node" id="node3" onclick="selectStage(3)" style="flex:1">
+      <div class="stage-circle">04</div>
+      <div class="stage-label">Evaluation</div>
+    </div>
+  </div>
+  <div style="background:white;border-radius:12px;padding:32px;box-shadow:0 6px 18px rgba(0,0,0,0.05);min-height:110px">
+    <div class="stage-detail active" id="stage0">
+      <h3 style="font-size:18px;font-weight:600;margin:0 0 10px;color:#2c2822">Data Collection</h3>
+      <p style="font-size:15px;line-height:1.7;color:#6b6259;margin:0">Underrepresented groups or scenarios missing from training data can bake skewed assumptions into a model before it's ever trained &mdash; the earliest and highest-leverage point to catch bias.</p>
+    </div>
+    <div class="stage-detail" id="stage1">
+      <h3 style="font-size:18px;font-weight:600;margin:0 0 10px;color:#2c2822">Model Development</h3>
+      <p style="font-size:15px;line-height:1.7;color:#6b6259;margin:0">Feature choices, labeling decisions, and optimization targets reflect the assumptions of the people building the model &mdash; without diverse review, these choices can quietly encode bias.</p>
+    </div>
+    <div class="stage-detail" id="stage2">
+      <h3 style="font-size:18px;font-weight:600;margin:0 0 10px;color:#2c2822">Deployment</h3>
+      <p style="font-size:15px;line-height:1.7;color:#6b6259;margin:0">A model can perform fairly in testing yet behave differently once exposed to real users and edge cases in production &mdash; deployment is where assumptions meet reality.</p>
+    </div>
+    <div class="stage-detail" id="stage3">
+      <h3 style="font-size:18px;font-weight:600;margin:0 0 10px;color:#2c2822">Evaluation</h3>
+      <p style="font-size:15px;line-height:1.7;color:#6b6259;margin:0">Bias can re-emerge over time as real-world data drifts from training data &mdash; ongoing evaluation, not a one-time check, is what keeps a model fair and trustworthy.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reveal" style="max-width:1100px;margin:0 auto;padding:36px 56px">
+  <h2 style="font-size:28px;font-weight:400;margin:0 0 24px">Strategies for Navigating Human Bias</h2>
+  <p style="font-size:16px;line-height:1.8;color:#4f473f;margin:0 0 28px;max-width:800px">To reduce the impact of human bias in AI and machine learning projects, these practical strategies apply within cloud platform engineering:</p>
+  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px">
+    <div class="strat-card" style="background:white;border-radius:12px;padding:26px;box-shadow:0 6px 18px rgba(0,0,0,0.05);border-top:3px solid #b5652f">
+      <span class="strat-num">1</span>
+      <h3 style="font-size:17px;font-weight:600;margin:0 0 10px;color:#2c2822">Build diverse and representative datasets</h3>
+      <p style="font-size:14.5px;line-height:1.7;color:#6b6259;margin:0">Evaluate whether training data represents different user groups and real-world scenarios before models are deployed. Regular data reviews help identify gaps that may introduce bias.</p>
+    </div>
+    <div class="strat-card" style="background:white;border-radius:12px;padding:26px;box-shadow:0 6px 18px rgba(0,0,0,0.05);border-top:3px solid #b5652f">
+      <span class="strat-num">2</span>
+      <h3 style="font-size:17px;font-weight:600;margin:0 0 10px;color:#2c2822">Integrate fairness checks into the MLOps pipeline</h3>
+      <p style="font-size:14.5px;line-height:1.7;color:#6b6259;margin:0">Just as CI/CD pipelines include automated testing for code quality and security, AI deployment pipelines should include fairness and bias evaluations before models are promoted to production.</p>
+    </div>
+    <div class="strat-card" style="background:white;border-radius:12px;padding:26px;box-shadow:0 6px 18px rgba(0,0,0,0.05);border-top:3px solid #b5652f">
+      <span class="strat-num">3</span>
+      <h3 style="font-size:17px;font-weight:600;margin:0 0 10px;color:#2c2822">Promote transparency and collaboration</h3>
+      <p style="font-size:14.5px;line-height:1.7;color:#6b6259;margin:0">AI solutions should not be developed in isolation. Collaboration among data scientists, software engineers, business stakeholders, and end users ensures multiple perspectives are considered throughout development and deployment.</p>
+    </div>
+    <div class="strat-card" style="background:white;border-radius:12px;padding:26px;box-shadow:0 6px 18px rgba(0,0,0,0.05);border-top:3px solid #b5652f">
+      <span class="strat-num">4</span>
+      <h3 style="font-size:17px;font-weight:600;margin:0 0 10px;color:#2c2822">Continuously monitor deployed AI systems</h3>
+      <p style="font-size:14.5px;line-height:1.7;color:#6b6259;margin:0">Bias can emerge over time as data changes. Monitoring, performance dashboards, and periodic model reviews identify concept drift, fairness issues, and unexpected behavior so models can be retrained when necessary.</p>
+    </div>
+    <div class="strat-card" style="background:white;border-radius:12px;padding:26px;box-shadow:0 6px 18px rgba(0,0,0,0.05);grid-column:span 2;border-top:3px solid #b5652f">
+      <span class="strat-num">5</span>
+      <h3 style="font-size:17px;font-weight:600;margin:0 0 10px;color:#2c2822">Foster a culture of learning and open communication</h3>
+      <p style="font-size:14.5px;line-height:1.7;color:#6b6259;margin:0">Leaders should encourage team members to question assumptions, discuss potential biases without fear of criticism, and continuously learn about responsible AI practices. Creating an environment where different viewpoints are welcomed leads to better technical decisions and more trustworthy AI systems.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reveal" style="max-width:800px;margin:0 auto;padding:20px 56px 90px;text-align:center">
+  <span class="quote-mark">&#8220;</span>
+  <p style="font-size:20px;font-weight:300;font-style:italic;line-height:1.6;color:#2c2822;margin:0 0 16px">By combining technical best practices with ethical leadership, organizations can build AI systems that are accurate, reliable, and equitable while maintaining the trust of users and stakeholders.</p>
+  <div style="width:48px;height:3px;background:#b5652f;border-radius:2px;margin:0 auto"></div>
+</section>
+
+<script>
+window.addEventListener('scroll', function(){
+  var h = document.documentElement.scrollHeight - window.innerHeight;
+  var pct = h > 0 ? (window.scrollY / h) * 100 : 0;
+  document.getElementById('progressBar').style.width = pct + '%';
+});
+var observer = new IntersectionObserver(function(entries){
+  entries.forEach(function(entry){
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, {threshold:0.12});
+document.querySelectorAll('.reveal').forEach(function(el){ observer.observe(el); });
+function selectStage(i){
+  document.querySelectorAll('.stage-detail').forEach(function(el,idx){ el.classList.toggle('active', idx===i); });
+  document.querySelectorAll('.stage-node').forEach(function(el,idx){ el.classList.toggle('active', idx===i); });
+}
+document.addEventListener('click', function(e){
+  var dd = document.getElementById('artifactsDropdown');
+  if (!dd.contains(e.target)) dd.classList.remove('open');
+});
+</script>
+</body>
+</html>
